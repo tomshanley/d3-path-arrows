@@ -5,7 +5,9 @@ function appendArrows (selection, arrowLength, gapLength, arrowHeadSize) {
   
     arrows = selection
       .append('path')
-      .attr('d', sankeyPath)
+      .attr('d', function(d){
+      	return d.path;
+    	})
       .style('stroke-width', 1)
       .style('stroke', 'black')
       .style('stroke-dasharray', arrowLength + ',' + gapLength)

@@ -14,7 +14,9 @@ var _d3Array = require("d3-array");
 function appendArrows(selection, arrowLength, gapLength, arrowHeadSize) {
   let totalDashArrayLength = arrowLength + gapLength;
 
-  arrows = selection.append('path').attr('d', sankeyPath).style('stroke-width', 1).style('stroke', 'black').style('stroke-dasharray', arrowLength + ',' + gapLength);
+  arrows = selection.append('path').attr('d', function (d) {
+    return d.path;
+  }).style('stroke-width', 1).style('stroke', 'black').style('stroke-dasharray', arrowLength + ',' + gapLength);
 
   arrows.each(function (arrow) {
     let thisPath = (0, _d3Selection.select)(this).node();
