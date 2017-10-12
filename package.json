@@ -1,0 +1,48 @@
+{
+  "name": "d3-path-arrows",
+  "version": "0.1.0",
+  "description": "Add arrows to your paths using CSS dash-array and SVG triangle shapes",
+  "main": "dist/index.js",
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
+  },
+  "scripts": {
+    "build-node": "babel src --out-dir dist",
+    "clean": "rimraf dist && mkdirp dist",
+    "build": "npm run clean && npm run build-node",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomshanley/d3-path-arrows.git"
+  },
+  "keywords": [
+    "D3",
+    "path"
+  ],
+  "author": "Tom Shanley",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tomshanley/d3-path-arrows/issues"
+  },
+  "homepage": "https://github.com/tomshanley/d3-path-arrows#readme",
+  "dependencies": {
+    "d3-array": "^1.2.1",
+    "d3-selection": "^1.1.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^2.6.2"
+  }
+}
