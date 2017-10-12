@@ -4,6 +4,10 @@ The function creates a path for each link in the data, and uses **dash-array** t
 
 This library can be used with other chart types, as long as the path function can be specified to the pathArrows instance.
 
+## Install
+
+If you use NPM, `npm install d3-path-arrows`, else you can use the vanilla js file in the [compiled](https://github.com/tomshanley/d3-path-arrows/tree/master/compiled) folder.
+
 ## Usage
 
 Create an instance of pathArrows, with function that will draw the path. Then call the instance of pathArrows on a selection that has the path data appended to it, for example:
